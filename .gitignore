@@ -1,0 +1,7 @@
+.idea/
+.DS_STORE
+*/.idea
+*/.DS_STORE
+*/node_modules
+server/deps
+server/_build

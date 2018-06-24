@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: center;
+  flex-wrap: wrap;
+  align-content: center;
+  font-family: "Open Sans", sans-serif;
+  background: linear-gradient(top, #222, #333);
+}
+
+.ticTacToe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 400px;
+  height: 400px;
+  padding: 5px;
+  border: 1px solid #e4e4e4;
+}
+.ticTacToe .column {
+  display: flex;
+  justify-content: space-between;
+}
+.ticTacToe .square {
+  display: block;
+  width: 125px;
+  height: 125px;
+  border: 1px solid #e4e4e4;
+  color: #e4e4e4;
+  font-size: 5em;
+  font-weight: 100;
+  text-align: center;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.join-room button {
+   padding: 10px;
+    outline: none;
+    border: 1px solid;
+}
+
+.join-room {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.info {
+  margin: 0 15px;
+  color: white;
+  font-size: 20px;
+}
+
+.self-info {
+  color: greenyellow;
+}
+
+.opponent-info {
+  color: red;
+}
