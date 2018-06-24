@@ -1,4 +1,4 @@
-# XoUmbrella
+# Elixir Tic-Tac-Toe
 
 #### To start server `cd server && mix.deps get && mix phx.server`
 > You can pass player's `name` and `id` with query params http://localhost:3000/?id=playerId&name=PlayerName
