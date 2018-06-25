@@ -18,7 +18,7 @@ export function startRoom ({ turn, players, cells }) {
 export function getMove ({ turn, winner, cells, error }) {
     if (error) return console.error(error);
 
-    store.dispatch(actions.setTurn(turn))
+    store.dispatch(actions.setTurn(winner ? -1 : turn))
     store.dispatch(actions.setWinner(winner))
     store.dispatch(actions.setBoard(cells))
 }

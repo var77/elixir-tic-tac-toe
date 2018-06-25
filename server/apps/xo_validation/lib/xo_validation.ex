@@ -35,10 +35,12 @@ defmodule XoValidation do
 
     win_comb = Enum.find(possibilites, fn comb -> combination_is_won(comb, cells) end)
 
-    winner = if win_comb do
-      win_symbol = Enum.at(cells, Enum.at(win_comb, 0))
-      Enum.find(players, &(&1.symbol === win_symbol)).id
-    else nil
+    winner = cond do
+      win_comb ->
+        win_symbol = Enum.at(cells, Enum.at(win_comb, 0))
+        Enum.find(players, &(&1.symbol === win_symbol)).id
+      !Enum.find(cells, &(&1 === 0)) -> -1
+      true -> nil
     end
 
     {:reply, {:ok, winner}, state}

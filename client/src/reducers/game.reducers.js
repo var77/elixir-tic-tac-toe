@@ -24,6 +24,7 @@ export const players = createReducer([window._player], {
     [types.setWinner] (state, action) {
         return state.map(player => {
             player.win = player.id === action.winner;
+            player.draw = action.winner === -1;
             return player;
         });
     },
